@@ -5,7 +5,6 @@
 
 using namespace std;
 
-
 class User {
 public:
     User(int identifier, string &first_name, string &last_name, int age, string &occupation);
@@ -24,6 +23,5 @@ private:
     int age;
     string occupation;
 };
-
 
 #endif //USER_CREATOR_USER_H
