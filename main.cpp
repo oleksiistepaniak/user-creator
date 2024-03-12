@@ -6,6 +6,24 @@ using namespace std;
 
 static int IDENTIFIER = 1;
 
+void print_info_about_users(vector<User> users)
+{
+    cout << "--------ALL USERS INFO----------------------------" << endl;
+    if (users.empty())
+    {
+        cout << "Unfortunately, there is no created users at the moment!" << endl;
+    }
+    for (User user : users)
+    {
+        cout << "**********INFO BY USER ID: " << user.getIdentifier() << "**********" << endl;
+        cout << "First name: " << user.getFirstName() << endl;
+        cout << "Last name: " << user.getLastName() << endl;
+        cout << "Age: " << user.getAge() << endl;
+        cout << "Occupation: " << user.getOccupation() << endl;
+    }
+    cout << "--------ALL USERS INFO----------------------------" << endl;
+}
+
 int main()
 {
 
@@ -100,20 +118,7 @@ int main()
 
         if (operation == 2)
         {
-            cout << "--------ALL USERS INFO----------------------------" << endl;
-            if (users.empty())
-            {
-                cout << "Unfortunately, there is no created users at the moment!" << endl;
-            }
-            for (User user : users)
-            {
-                cout << "**********INFO BY USER ID: " << user.getIdentifier() << "**********" << endl;
-                cout << "First name: " << user.getFirstName() << endl;
-                cout << "Last name: " << user.getLastName() << endl;
-                cout << "Age: " << user.getAge() << endl;
-                cout << "Occupation: " << user.getOccupation() << endl;
-            }
-            cout << "--------ALL USERS INFO----------------------------" << endl;
+            print_info_about_users(users);
         }
 
         if (operation == 3)
